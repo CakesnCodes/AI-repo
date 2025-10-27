@@ -29,17 +29,3 @@ def casndra():
 new_col = pd.DataFrame({"Predicted Quality":casndra()})
 df = pd.concat([df, new_col], axis=1)
 
-res1 = df['Predicted Quality']
-
-"""accuracy_2 = accuracy_score(df['Quality'], df['Predicted Quality'])
-precision_2 = precision_score(df['Quality'], df['Predicted Quality'], pos_label="good")
-recall_2 = recall_score(df['Quality'], df['Predicted Quality'], pos_label="good")
-f1_2 = f1_score(df['Quality'], df['Predicted Quality'], pos_label="good")
-
-
-print('Evaluation:')
-print(f'Accuracy: {accuracy_2:.4f}')
-print(f'Precision: {precision_2:.4f}')
-print(f'Recall: {recall_2:.4f}')
-print(f'F1 Score: {f1_2:.4f}')"""
-
