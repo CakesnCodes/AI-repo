@@ -14,7 +14,7 @@ df = pd.read_csv("apple_quality.csv") # Created by Nidula Elgiriyewithana
 quality = df['Quality'].values.tolist()
 
 
-def casndra():
+def Honeybee():
     pquality = []
     for apple,row in df.iterrows():
         points = 0
@@ -35,7 +35,8 @@ def casndra():
         
     return pquality
 
-new_col = pd.DataFrame({"Predicted Quality":casndra()})
+new_col = pd.DataFrame({"Predicted Quality":Honeybee()})
 df = pd.concat([df, new_col], axis=1)
 
     
+
