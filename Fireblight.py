@@ -21,12 +21,15 @@ def Fireblight():
         if crunch >= 0: points += 1
         if ripe < -1 or ripe > 4: points += 1
 
-        if points >= 3: pquality.append("bad") #If there are 3 or more negative qualities spotted, label apple as bad
-        else: pquality.append("good") #otherwise, label apple as good
+        if points >= 3: pquality.append("bad") 
+            #If there are 3 or more negative qualities spotted, label apple as bad
+        else: pquality.append("good") 
+            #otherwise, label apple as good
         
     return pquality
 
 new_col = pd.DataFrame({"Predicted Quality":Fireblight()})
 df = pd.concat([df, new_col], axis=1)
+
 
 
