@@ -22,14 +22,24 @@ def Fireblight():
         if ripe < -1 or ripe > 4: points += 1
 
         if points >= 3: pquality.append("bad") 
-            #If there are 3 or more negative qualities spotted, label apple as bad
-        else: pquality.append("good") 
-            #otherwise, label apple as good
+        #If there are 3 or more negative qualities spotted, label apple as bad
+        else: pquality.append("good") #otherwise, label apple as good
         
     return pquality
 
 new_col = pd.DataFrame({"Predicted Quality":Fireblight()})
 df = pd.concat([df, new_col], axis=1)
 
+res1 = df['Predicted Quality']
 
+accuracy_2 = accuracy_score(df['Quality'], df['Predicted Quality'])
+precision_2 = precision_score(df['Quality'], df['Predicted Quality'], pos_label="good")
+recall_2 = recall_score(df['Quality'], df['Predicted Quality'], pos_label="good")
+f1_2 = f1_score(df['Quality'], df['Predicted Quality'], pos_label="good")
+
+print('FB Evaluation:')
+print(f'Accuracy: {accuracy_2:.4f}')
+print(f'Precision: {precision_2:.4f}')
+print(f'Recall: {recall_2:.4f}')
+print(f'F1 Score: {f1_2:.4f}')
 
