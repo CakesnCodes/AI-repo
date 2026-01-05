@@ -14,7 +14,7 @@ y = df['RainTomorrow']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-log_reg = LogisticRegression() #
+log_reg = LogisticRegression() # i got no joke for this one, just penguins :)
 
 log_reg.fit(X_train, y_train)
 y_pred = log_reg.predict(X_test)
@@ -30,3 +30,4 @@ print(f'Precision: {precision:.4f}')
 print(f'Recall: {recall:.4f}')
 
 print(f'F1 Score: {f1:.4f}')
+
