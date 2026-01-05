@@ -24,9 +24,10 @@ recall = recall_score(y_test, y_pred, pos_label= 'Yes')
 precision = precision_score(y_test, y_pred, pos_label= 'Yes')
 f1 = f1_score(y_test, y_pred, pos_label= 'Yes')
 
-print("Kookaburra Evaluation")
+print("Decision Tree Evaluation")
 print(f'Accuracy: {accuracy:.4f}')
 print(f'Precision: {precision:.4f}')
 print(f'Recall: {recall:.4f}')
 
 print(f'F1 Score: {f1:.4f}')
+
