@@ -14,7 +14,7 @@ y = df['RainTomorrow']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-dt = DecisionTreeClassifier(random_state=42)
+dt = DecisionTreeClassifier(random_state=42) #Kookaburra sits in the old gum tree
 
 dt.fit(X_train, y_train)
 y_pred = dt.predict(X_test)
@@ -28,4 +28,5 @@ print("Kookaburra Evaluation")
 print(f'Accuracy: {accuracy:.4f}')
 print(f'Precision: {precision:.4f}')
 print(f'Recall: {recall:.4f}')
+
 print(f'F1 Score: {f1:.4f}')
